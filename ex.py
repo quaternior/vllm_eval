@@ -24,7 +24,7 @@ args = parser.parse_args()
 batch = ["Q:Who are you? A:"] * args.batch_size
 # (TODO) Batch made by public dataset
 # batch= prompts[:args.batch_size]
-output_path = "output{}.txt".format(args.block_size)
+output_path = "output_batch{}_bs{}.txt".format(args.block_size)
 sys.stdout = open(output_path, "w")
 os.environ['VLLM_ATTENTION_BACKEND'] = 'XFORMERS'
 
